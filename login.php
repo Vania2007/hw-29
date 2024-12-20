@@ -13,7 +13,7 @@ if (!isset($_SESSION['authorized'])) {
 }
 if (!isset($_GET['go'])) {
 
-    if (!isset($_SESSION['err'])) {
+    if (isset($_SESSION['err'])) {
         echo "Неправильний ввід, спробуйте ще раз!<br/>";
     }
 } else {
