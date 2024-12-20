@@ -4,7 +4,7 @@ if (session_status() != PHP_SESSION_ACTIVE) {
 }
 
 // створюємо нову сесію або відновлюємо поточну
-if(!isset($_SESSION['authorized'])){
+if (!isset($_SESSION['authorized'])) {
     echo "<form action='login.php'>
     Login: <input type='text' name='login'>
     Password: <input type='password' name='passwd'>
@@ -12,8 +12,8 @@ if(!isset($_SESSION['authorized'])){
 </form>";
 }
 if (!isset($_GET['go'])) {
-    
-    if (!isset($_GET['go'])) {
+
+    if (!isset($_SESSION['err'])) {
         echo "Неправильний ввід, спробуйте ще раз!<br/>";
     }
 } else {
